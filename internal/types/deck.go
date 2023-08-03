@@ -26,18 +26,18 @@ func NewDeck() *Deck {
 	}
 }
 
-func (d *Deck) print() {
+func (d *Deck) Print() {
 	for _, card := range d.Cards {
-		card.print()
+		card.Print()
 	}
 }
 
-func (d *Deck) draw() Card {
+func (d *Deck) Draw() Card {
 	d.Cards = d.Cards[1:]
 	return d.Cards[0]
 }
 
-func (d *Deck) shuffle() {
+func (d *Deck) Shuffle() {
 	for i := range d.Cards {
 		j := rand.Intn(len(d.Cards))
 		d.Cards[i], d.Cards[j] = d.Cards[j], d.Cards[i]

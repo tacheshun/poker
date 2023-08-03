@@ -7,6 +7,6 @@ type Card struct {
 	Value int  `json:"value"`
 }
 
-func (c *Card) print() {
+func (c *Card) Print() {
 	fmt.Println(c.Value, "of", c.Suit)
 }
